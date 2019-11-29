@@ -1,7 +1,7 @@
 ---
 
 - name: Init email.txt
-  shell: cat > ./email.txt
+  shell: touch ./email.txt
   delegate_to: localhost # ansible
   run_once: true
 
