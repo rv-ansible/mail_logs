@@ -34,11 +34,11 @@
         msg: 'Unused Disk Info email sent to {{email_to}}.'
       run_once: true   
   
-  when: send_mail=='TRUE'
+  when: send_mail|default('FALSE')=='TRUE'
   
 - name: "Copy email.txt to client {{inventory_hostname}}"
   copy:
     src: ./email.txt
     dest: ./email.txt
   run_once: true
-  when: send_mail=='FALSE'     
+  when: send_mail|default('FALSE')=='FALSE'     
