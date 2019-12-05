@@ -41,5 +41,4 @@
     src: ./email.txt
     dest: ./email.txt
   run_once: true
-  mode: 0022   
   when: send_mail=='FALSE'     
